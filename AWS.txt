@@ -1,0 +1,419 @@
+AWS - Terraform
+
+Init - preparing your directory for other commands
+Validate - check whether the configuration is valid
+Plan - show changes by the current configuration
+Apply - create or update the infrastructure
+Destroy - Destroy the previously created-created infrastructure
+Console - try terraform expression at an interactive prompt
+Fmt - reformat your configuration in the standard style
+Force-unlock - release a stuck lock on current workspace 
+Get - install or upgrade remote terraform module
+Graph - Generate a graphviz graph of the steps of an operation 
+Import - associate existing infrastructure with a terraform resource	
+Login - Obtain and save credentials for a remote host
+Remote host - It is a computer, server or a device located in a different location that you connect to over a network or over the internet to access data, applications or resources.
+Logout - remove locally stored credentials for a remote host
+Metadata - metadata related commands
+Modules - show all declared modules in a working directory 
+Output - show output values from your root module
+Providers - show the providers for the required configuration 
+Refresh - update the state to match remote systems
+Show - show the current state or a saved plan
+State - advanced state management
+Taint - mark a resource instance as not fully functional 
+Untaint -Remove the tainted state from a resource instance
+Version - show the current terraform version
+Workspace - workspace management'
+
+
+AWS sets get-caller-identity(sts - security token service)
+
+This command calls the AWS STS (AWS Security service token)API and returns details about the identity you are currently authenticated as
+
+AWS configure list
+
+This command shows where your was cli is getting credentials and config from
+
+Git credential-osxkeychain
+
+Git credential helper for macOS. It stores our git credentials securely in the keychain access access app so we don't have to enter them every time
+
+Source ../.env
+
+Source - runs your file in your current shell
+../ - go one directory up
+.env - file containing env variables
+
+7Rs of migration
+1. Rehost - Lift and shift - Take it from one place and put it to another platform
+2. Re-platform -Database remains the same but platform changes
+3. Refactor(Rearchitecture) -  maximum changes
+4. Relocate
+5. Retain
+6. Retire
+7. Repurchase
+  
+
+Wave plan 
+ETL - Extract transform and load
+
+Serverless - 
+1. Event based architecture 
+2. Was lambda, s3 sqs sns azure functions api gateways
+
+OpenSearch service
+
+Amazon OpenSearch Service is a fully managed AWS service that enables easy deployment, operation, and scaling of OpenSearch clusters for log analytics, real-time application monitoring, and search. It is an open-source (Apache 2.0) successor to Elasticsearch, providing robust security, visualization via OpenSearch Dashboards, and AI-powered search capabilities. 
+Amazon.com
+Amazon.com
+ +3
+Key Features and Benefits
+Managed Infrastructure: Eliminates the need for manual setup, patching, or scaling, allowing focus on data analysis rather than maintenance.
+Powerful Analytics & Search: Supports full-text search, k-NN (k-nearest neighbors) for vector search, and SQL queries to analyze large volumes of data.
+Real-time Observability: Ideal for analyzing logs, monitoring system performance, and security analytics.
+Cost-Effective Storage: Features UltraWarm and Cold Storage options for retaining massive amounts of data at lower costs.
+Security & Integration: Offers built-in encryption, fine-grained access control, and integration with tools like Active Directory, SAML, and Kibana. 
+OpenSearch Serverless
+Amazon also offers Amazon OpenSearch Serverless, which automatically provisions and scales resources, removing the need to manage instance types or node counts. 
+AWS
+AWS
+Common Use Cases
+Log Analytics: Centralizing and analyzing logs from various applications.
+Application Search: Implementing fast, relevant search for websites or apps.
+Vector Database: Powering generative AI applications with semantic search. 
+AWS
+AWS
+ +4
+
+Amazon Extract
+
+Amazon Textract is a machine learning (ML) service that automatically extracts printed text, handwriting, forms, tables, and structured data from scanned documents and images. It goes beyond traditional Optical Character Recognition (OCR) to understand document context, making it ideal for processing invoices, IDs, and financial records without manual intervention. 
+Amazon Web Services (AWS)
+Amazon Web Services (AWS)
+ +3
+Key Features and Capabilities:
+Document Analysis (Tables/Forms): Automatically detects and extracts data from forms (key-value pairs) and tables, maintaining relationships between data points.
+Text Detection (OCR): Identifies printed text and handwriting across various document formats like PDFs, images, and medical records.
+Specialized API Support: Includes specific APIs for processing invoices/receipts (AnalyzeExpense) and ID documents like driver’s licenses (AnalyzeID).
+Query Functionality: Allows users to ask questions (e.g., "What is the invoice number?") to extract specific information without relying on document structure.
+High Accuracy & Security: Returns confidence scores for each extracted element and keeps data secure, adhering to rigorous compliance standards.
+Confidence Scores & Location Data: Provides bounding box coordinates to identify where text appears on a page. 
+Amazon.com
+Amazon.com
+ +4
+How It Works:
+Upload: Documents are uploaded to Amazon S3 or sent directly to the API.
+Process: Textract uses ML to analyze the document.
+Output: Results are returned in JSON format, containing text, tables, and form data, which can be further processed by systems like AWS Lambda or Amazon Comprehend. 
+YouTube
+YouTube
+ +1
+Common Use Cases:
+Financial Services: Automating loan applications and invoice processing.
+Healthcare: Extracting data from medical records and insurance claims.
+Public Sector: Processing tax forms and identity documents. 
+Amazon Web Services
+Amazon Web Services
+ +4
+Pricing:
+Amazon Textract follows a pay-as-you-go model, where you only pay for the documents processed, with no minimum fees or upfront commitments.
+
+
+AWS -
+EC2
+EC2 - OTHER
+LOAD BALANCERS - UNUSED DELETE
+S3 - UNUSED - WE HAVE
+FREE SWITCH - UNABLE TO RETRIVE DATA
+BEDROCK AGENT CORE
+OPENSEARCH
+ECS EKS CONTAINERS DELETE
+
+ELASTIC IPS
+SNAPSHOTS
+CLOUDWATCH LOGS
+NAT GATEWAY
+DATA TRANSFER
+
+
+Route53
+
+Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service designed to route end-users to internet applications by translating human-readable names (e.g., www.example.com) into numeric IP addresses (e.g., 192.0.2.1). It acts as a DNS registrar, health checker, and traffic controller with 100% SLA. 
+Key Features and Capabilities:
+DNS Management: Provides authoritative DNS, allowing developers to manage traffic for web applications and map domains to AWS resources like EC2, S3, and CloudFront.
+Routing Policies: Supports intelligent routing, including:
+Latency-based routing: Directs users to the lowest latency region.
+Weighted routing: Distributes traffic across multiple resources (e.g., for canary testing).
+Geo-proximity/Geolocation routing: Routes based on user location.
+Health Checks: Monitors application endpoints to ensure they are available; can route traffic away from unhealthy resources.
+Domain Registration: Allows purchasing and managing domain names directly.
+Private DNS: Enables DNS resolution within VPCs using private hosted zones. 
+Besant Technologies
+Besant Technologies
+ +5
+Route 53 is fully compliant with IPv6 and is used to connect both AWS-hosted and non-AWS infrastructure. 
+
+AWS CloudFront
+
+Amazon CloudFront is a fast, secure content delivery network (CDN) service provided by AWS that speeds up the distribution of static and dynamic web content (HTML, CSS, JS, images, video) to users globally. It uses a widespread network of edge locations to cache content closer to viewers, reducing latency and costs. 
+Amazon Web Services
+Amazon Web Services
+ +4
+Key Features and Benefits of CloudFront:
+High Performance: Uses 750+ global points of presence (PoPs) to deliver data with low latency, supported by automated network mapping.
+Enhanced Security: Integrates with AWS Shield for DDoS protection, AWS WAF, and offers traffic encryption (HTTPS/SSL) and field-level encryption.
+Cost-Effective: Offers zero fees for data transfer out from AWS origins to CloudFront, reducing expenses for large data delivery.
+Edge Computing: Enables customization of content delivery at the edge using CloudFront Functions and Lambda@Edge.
+Seamless Integration: Works with AWS services like Amazon S3, EC2, and Elastic Load Balancing. 
+Amazon Web Services
+Amazon Web Services
+ +3
+How It Works:
+When a user requests content, CloudFront routes them to the nearest edge location. If the data is cached, it is served immediately. If not, CloudFront retrieves it from the defined origin (e.g., S3 bucket or HTTP server) and caches it for future requests. 
+Medium
+Medium
+ +1
+
+
+AWS WAF
+
+AWS WAF (Web Application Firewall) is a managed security service that protects web applications from common exploits (e.g., SQL injection, XSS) and malicious bot traffic by filtering HTTP(S) requests. It integrates directly with Amazon CloudFront, Application Load Balancer, API Gateway, and more to allow, block, or count traffic based on custom rules. 
+AWS
+AWS
+ +3
+Key Features and Benefits
+Protection against Attacks: Shields applications from common vulnerabilities, including those listed in the OWASP Top 10.
+Bot Control & Fraud Prevention: Manages bot traffic and offers specialized rule sets like Account Takeover Prevention (ATP) to combat credential stuffing.
+Customizable Rules: Allows creating tailored rules based on IP addresses, HTTP headers, body, or URI strings.
+Managed Rulesets: Offers pre-configured rules managed by AWS or third-party sellers on the AWS Marketplace.
+Visibility & Insights: Provides near real-time logs and metrics via the console or Amazon CloudWatch, allowing for analysis of traffic patterns and blocked requests. 
+AWS
+AWS
+ +7
+Components of AWS WAF
+Web ACL (Web Access Control List): Defines the central policy to monitor and protect resources, containing a set of rules.
+Rules: Sets the criteria to inspect web requests and the action to take (Allow, Block, Count, CAPTCHA).
+Rule Groups: Reusable collections of rules that can be shared across different web ACLs. 
+Amazon AWS Documentation
+Amazon AWS Documentation
+ +4
+Integration and Deployment
+AWS WAF is easy to deploy, requiring no additional software installation. It is commonly deployed in front of: 
+Amazon CloudFront CDN
+Application Load Balancer (ALB)
+Amazon API Gateway
+AWS AppSync (GraphQL APIs)
+AWS App Runner
+Amazon Cognito User Pools. 
+Amazon AWS Documentation
+Amazon AWS Documentation
+ +3
+Pricing
+AWS WAF pricing is based on the number of web ACLs, the number of rules per ACL, and the volume of web requests received. 
+
+Sql Injection 
+
+SQL Injection (SQLi) is a web security vulnerability allowing attackers to interfere with database queries, often bypassing authentication and viewing, modifying, or deleting sensitive data. It occurs when untrusted user input is directly concatenated into SQL queries, enabling malicious SQL code execution. 
+PortSwigger
+PortSwigger
+ +3
+Key Aspects of SQL Injection:
+Impact: Attackers can steal data, bypass authentication, modify backend data (INSERT/UPDATE/DELETE), and sometimes gain control of the underlying server.
+Mechanism: It exploits lack of input sanitization in applications, allowing malicious SQL commands (e.g., ' OR 1=1--) to be inserted into web forms, URL parameters, or API endpoints.
+Types: Common types include In-band (Classic) SQLi (uses the same communication channel), Inferential (Blind) SQLi (infers data by observing server behavior), and Out-of-band SQLi (exfiltrates data via other channels).
+Prevention:
+Prepared Statements (Parameterized Queries): Use parameterized queries to ensure the database treats input as data, not code.
+Input Validation/Sanitization: Strict filtering of user input.
+Principle of Least Privilege: Limit database account permissions.
+Stored Procedures: Similar to prepared statements, they can prevent injection if implemented correctly.
+Example: A vulnerable query SELECT * FROM users WHERE id = ' + id + ' can be exploited with input 1' OR '1'='1 to return all users. 
+owasp
+owasp
+ +7
+SQL Injection is frequently ranked among the most severe web application vulnerabilities. 
+
+XSS
+
+Cross-Site Scripting (XSS) injection is a vulnerability where attackers inject malicious client-side scripts (usually JavaScript) into trusted websites. When victims visit the infected page, the browser executes the script, allowing attackers to steal session cookies, impersonate users, or deface websites. 
+PortSwigger
+PortSwigger
+ +3
+Types of XSS Injection
+Reflected XSS (Non-Persistent): The malicious script is "reflected" off the web server, often via a crafted link containing the payload in a search result or error message.
+Stored XSS (Persistent): The malicious script is permanently stored on the target server (e.g., in a database, user profile, or comment field) and served to users.
+DOM-based XSS: The vulnerability exists in client-side code rather than server-side code. The attack happens by modifying the Document Object Model (DOM) in the user's browser.
+Mutated XSS (mXSS): The attacker injects safe code that is rewritten and modified by the browser into an unsafe script. 
+owasp
+owasp
+ +4
+Common XSS Payloads 
+Attackers often use these types of vectors: 
+Script Tags: <script>alert(document.cookie)</script>
+Image Error: <img src=x onerror=alert(1)>
+Body Load: <body onload=alert(1)> 
+How to Prevent XSS
+Filter/Sanitize Input: Validate user input upon arrival, filtering out malicious characters.
+Encode Output: Convert special characters into their HTML entity equivalents (e.g., < to &lt;) before rendering them in the browser.
+Content Security Policy (CSP): Implement a CSP header to restrict which resources (scripts, images) can be loaded.
+Set HttpOnly Cookies: Prevent JavaScript from accessing session cookies to mitigate token theft. 
+OutSystems
+OutSystems
+ +4
+XSS attacks target the user, not the application itself, making them a significant risk to user trust and data integrity
+
+OWASP
+
+The OWASP Top 10 is a standard awareness document representing a consensus on the most critical web application security risks. Updated periodically (2021/2025), it helps developers and organizations prioritize security efforts to mitigate vulnerabilities like broken access control, cryptographic failures, and injection attacks. 
+owasp
+owasp
+ +3
+Key Components of the OWASP Top 10 (2025/2021 Trends):
+A01:2025—Broken Access Control: Restrictions on user actions are not properly enforced, allowing unauthorized access.
+A02:2025—Security Misconfiguration: Insecure default configurations, open cloud storage, or misconfigured HTTP headers.
+A03:2025—Software Supply Chain Failures: Risks related to third-party libraries, plugins, and dependencies.
+A04:2025—Cryptographic Failures: Formerly "Sensitive Data Exposure," focusing on failures to protect data in transit or at rest.
+A05:2025—Injection: Untrusted data is sent to an interpreter, causing unintended commands or data access (e.g., SQLi, XSS).
+A06:2025—Insecure Design: Focuses on risks related to design flaws, requiring secure development lifecycles.
+A07:2025—Identification and Authentication Failures: Weaknesses in authentication allowing session hijacking or credential stuffing.
+A08:2025—Software and Data Integrity Failures: Code or data updated without verification, such as insecure deserialization.
+A09:2025—Security Logging and Monitoring Failures: Inadequate logging that prevents timely detection of breaches.
+A10:2025—Server-Side Request Forgery (SSRF): Attackers force web applications to send forged requests to unexpected destinations. 
+Cloudflare
+Cloudflare
+ +5
+Additional OWASP Top 10 Resources:
+Mobile Top 10: Focuses on mobile-specific risks like improper platform usage and insecure data storage.
+LLM Top 10: Addresses risks specific to Large Language Models and Generative AI, such as prompt injection.
+API Security Top 10: Targets risks in API-driven applications. 
+OWASP Gen AI Security Project
+OWASP Gen AI Security Project
+ +4
+The OWASP Foundation website provides the most current, comprehensive, and detailed information.
+
+Account Takeover Prevention
+
+Account takeover (ATO) prevention requires a multi-layered strategy combining mandatory Multi-Factor Authentication (MFA), bot detection, and behavioral analytics to identify, monitor, and block unauthorized access. Key measures include enforcing strong, unique passwords,rate-limiting login attempts to stop brute-force attacks, and training users to recognize phishing. 
+Amazon.com
+Amazon.com
+ +6
+Key Account Takeover Prevention Strategies:
+Multi-Factor Authentication (MFA): Implementing MFA is the most effective defense, requiring a second form of verification (e.g., authenticator app, hardware key) beyond just a password.
+Bot Detection and Mitigation: Using advanced bot management tools helps identify and block automated attacks, credential stuffing, and scanners.
+Behavioral Analytics: Analyzing user behavior, such as login times, device usage, and location, allows for the detection of anomalies that suggest fraud.
+Rate Limiting and WAFs: Configuring Web Application Firewalls (WAF) to limit login requests from specific IPs or users helps defend against brute-force and credential-stuffing attacks.
+Credential Monitoring: Proactively monitoring for leaked user credentials in the dark web allows for forced password resets before they are exploited.
+Employee Education: Training employees to recognize phishing attempts, which are the primary method for stealing credentials.
+API Security: Protecting application programming interfaces (APIs) with authentication controls and monitoring to prevent them from becoming entry points for attackers. 
+Amazon.com
+Amazon.com
+ +9
+Common ATO Attack Vectors:
+Credential Stuffing: Using lists of usernames and passwords from previous breaches to gain access.
+Phishing: Tricking users into revealing their credentials.
+Brute-Force Attacks: Systematically guessing passwords. 
+YouTube
+YouTube
+ +1
+Organizations should employ a fraud detection solution that provides comprehensive visibility into user activity, allowing for real-time monitoring and immediate action when suspicious patterns emerge. 
+
+
+Aivar Innovations
+Cloud Modernization
+Agentic-Polo
+mlops
+ 
+
+Devops-tools
+
+Modernisation
+
+
+
+
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROFILE="${1:-default}"
+OUTFILE="aws-account-resources-$(date +%Y%m%d-%H%M%S).csv"
+
+command -v aws >/dev/null 2>&1 || { echo "aws CLI not installed" >&2; exit 1; }
+command -v jq  >/dev/null 2>&1 || { echo "jq not installed" >&2; exit 1; }
+
+echo "region,resource_arn" > "$OUTFILE"
+
+regions=$(aws account list-regions \
+  --profile "$PROFILE" \
+  --region us-east-1 \
+  --region-opt-status-contains ENABLED ENABLED_BY_DEFAULT \
+  --query 'Regions[].RegionName' \
+  --output text)
+
+for region in $regions; do
+  echo "Scanning $region..." >&2
+  token=""
+
+  while true; do
+    if [ -n "$token" ]; then
+      response=$(aws resourcegroupstaggingapi get-resources \
+        --profile "$PROFILE" \
+        --region "$region" \
+        --resources-per-page 100 \
+        --pagination-token "$token" \
+        --output json)
+    else
+      response=$(aws resourcegroupstaggingapi get-resources \
+        --profile "$PROFILE" \
+        --region "$region" \
+        --resources-per-page 100 \
+        --output json)
+    fi
+
+    echo "$response" | jq -r --arg region "$region" '
+      .ResourceTagMappingList[]?
+      | [$region, .ResourceARN]
+      | @csv
+    ' >> "$OUTFILE"
+
+    token=$(echo "$response" | jq -r '.PaginationToken // empty')
+    [ -z "$token" ] && break
+  done
+done
+
+echo "Done. Output saved to: $OUTFILE" >&2
+
+
+
+
+
+Hi Team,
+
+We’ve generated an AWS resource inventory report and shared it here.
+
+Please review the resources listed in the sheet and identify any that are unused or underutilized (e.g., stopped instances, unattached volumes, idle services, etc.).
+
+For any resources that are no longer required, please proceed with safe shutdown or cleanup, ensuring there is no impact to active workloads.
+
+If you are unsure about any resource, please check with the respective owner before taking action.
+
+Kindly complete the review and updates by [add deadline].
+
+
+
+
+Let me know if you need any clarification.
+
+Thanks!
+
+
+Aivar Innovations
+Cloud Modernization
+Agentic-Polo
+mlops
+
+10000 - For Bhoomi
+16000 - for rent
+
+26000 
+
+aws_master_sheet3.xlsx 
